@@ -600,7 +600,11 @@ $RECYCLE.BIN/
 *.lnk
 
 # Local development
-/.local_dev
+local_dev/**
+local_data/**
+.cursor
+data/
+output/
 
 # End of https://www.toptal.com/developers/gitignore/api/linux,macos,python,pycharm,windows,visualstudiocode,java,node,intellij+all
 

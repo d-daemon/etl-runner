@@ -1,0 +1,17 @@
+mode: local  # or "gcp" if running against BigQuery
+project: local  # placeholder since no GCP access
+
+datasets:
+  dummy_data:
+    path: data/dummy
+    tables:
+    - name: customer_table.csv
+      filter: "IMAGE_DT == '{calendar_end_1m}'"
+    - name: accounts_table.csv
+      filter: "IMAGE_DT == '{calendar_end_1m}'"
+    - name: account_ownership_table.csv
+      filter: "IMAGE_DT == '{calendar_end_1m}'"
+    - name: credit_transaction_table.csv
+      filter: "IMAGE_DT >= '{calendar_start_1m}' and IMAGE_DT <= '{calendar_end_1m}'"
+    - name: deposit_transaction_table.csv
+      filter: "IMAGE_DT >= '{calendar_start_1m}' and IMAGE_DT <= '{calendar_end_1m}'"
